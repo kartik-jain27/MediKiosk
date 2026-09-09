@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { DoctorLayout } from "@/apps/doctor/components/DoctorLayout";
 import { RequireRole } from "@/apps/shared/components/RequireRole";
+import { PortalLayout } from "@/apps/shared/components/SiteFrame";
 import { StaffDashboard } from "@/apps/staff/screens/Dashboard";
 import { StaffLogin } from "@/apps/staff/screens/Login";
 import { StaffRegister } from "@/apps/staff/screens/Register";
@@ -31,11 +32,13 @@ export default function App() {
         <Route path="documents" element={<Documents />} />
         <Route path="complete" element={<Complete />} />
       </Route>
-      <Route path="/staff/register" element={<StaffRegister />} />
-      <Route path="/staff/login" element={<StaffLogin />} />
-      <Route path="/staff/dashboard" element={<RequireRole role="staff"><StaffDashboard /></RequireRole>} />
-      <Route path="/doctor/login" element={<Login />} />
-      <Route path="/doctor/register" element={<DoctorRegister />} />
+      <Route element={<PortalLayout />}>
+        <Route path="/staff/register" element={<StaffRegister />} />
+        <Route path="/staff/login" element={<StaffLogin />} />
+        <Route path="/staff/dashboard" element={<RequireRole role="staff"><StaffDashboard /></RequireRole>} />
+        <Route path="/doctor/login" element={<Login />} />
+        <Route path="/doctor/register" element={<DoctorRegister />} />
+      </Route>
       <Route path="/doctor" element={<RequireRole role="doctor"><DoctorLayout /></RequireRole>}>
         <Route path="queue" element={<Queue />} />
         <Route path="summary/:patientId" element={<SummaryDetail />} />
