@@ -1,0 +1,34 @@
+{
+  "shell": { "footer": "Your doctor reviews and approves every clinical record." },
+  "common": { "continue": "Continue", "pleaseWait": "Please wait...", "listen": "Listen to guidance", "error": "Something went wrong. Please try again." },
+  "landing": {
+    "badge": "AI-Powered Clinical Intake & Case-Taking",
+    "title": "Welcome. Tell us how we can help today.",
+    "subtitle": "You can speak or tap the screen to describe your health concern before meeting the doctor.",
+    "returning": "Returning Patient (ABHA Link)", "returningDetail": "Start with your existing hospital details.",
+    "newPatient": "New Patient Registration", "newPatientDetail": "Create your intake record in a few steps.",
+    "emergency": "Emergency / Immediate Doctor Assistance", "emergencyDetail": "For severe or urgent symptoms.",
+    "token": { "prompt": "Have a token from staff? Enter it here", "label": "Patient token", "placeholder": "Enter token code", "submit": "Continue with token", "error": "This token is invalid or has already been used." }
+  },
+  "register": {
+    "title": "Tell us about you", "subtitle": "Please enter your details to begin.", "returning": "Returning patient", "newPatient": "New patient",
+    "name": "Your name", "phone": "10-digit mobile number", "nameError": "Enter at least 2 characters.", "phoneError": "Enter a valid 10-digit Indian mobile number.",
+    "priority": "Priority intake - you'll be seen as soon as possible"
+  },
+  "consent": {
+    "title": "Your permission", "explanation": "We will collect only the information needed to prepare your visit for the doctor. You can choose what you agree to.",
+    "collected": { "title": "What information will be collected", "body": "Your basic details, health concerns, history, and any documents you choose to upload." },
+    "used": { "title": "How this information will be used", "body": "It helps create a clear intake summary and identify urgent warning signs for your care team." },
+    "never": { "title": "What will never happen", "body": "AI will not diagnose you, write automated prescriptions, or sell your data. Doctor remains in full control of diagnosis and treatment." },
+    "items": {
+      "history_collection": { "title": "Collect my health history", "detail": "Ask questions about my concern and past health." },
+      "document_processing": { "title": "Process my health documents", "detail": "Read reports or prescriptions I choose to upload." },
+      "data_sharing": { "title": "Share with my care team", "detail": "Let the hospital team use this intake for my visit." }
+    }
+  },
+  "mode": { "title": "Select Department", "subtitle": "AYUSH mode includes traditional history-taking such as Prakriti, Vikriti, and Agni.", "ayush": "AYUSH Intake", "general": "General OPD", "departments": { "kayachikitsa": { "name": "Kayachikitsa", "detail": "General Ayurvedic Medicine" }, "panchakarma": { "name": "Panchakarma", "detail": "Therapeutic cleansing care" }, "swasthavritta": { "name": "Swasthavritta & Yoga", "detail": "Lifestyle and yoga care" }, "general": { "name": "General Medicine & Modern OPD", "detail": "Standard clinical intake" } } },
+  "interview": { "step": "Step {{current}} of {{total}}", "replay": "Read this question aloud", "yes": "Yes", "no": "No", "answer": "Your answer", "placeholder": "Type your answer here", "speak": "Speak your answer", "stopListening": "Stop listening", "voiceInputUnavailable": "Voice input could not start. Please type your answer.", "stages": { "CHIEF_COMPLAINT": "Chief complaint", "HPI": "Current concern", "PAST_MEDICAL_HISTORY": "Past medical history", "SURGICAL_HISTORY": "Surgical history", "MEDICATIONS": "Medicines", "ALLERGIES": "Allergies", "FAMILY_HISTORY": "Family history", "PERSONAL_HISTORY": "Daily habits", "REVIEW_OF_SYSTEMS": "Other symptoms" }, "questions": { "CHIEF_COMPLAINT": "What brings you in today?", "HPI": "How much is this affecting your daily life today?", "PAST_MEDICAL_HISTORY": "Do you have any medical conditions?", "SURGICAL_HISTORY": "Have you had any surgeries?", "MEDICATIONS": "Which medicines do you take regularly?", "ALLERGIES": "Do you have any allergies?", "FAMILY_HISTORY": "Are there important health conditions in your family?", "PERSONAL_HISTORY": "Which statement best describes your daily habits?", "REVIEW_OF_SYSTEMS": "Are you experiencing any other symptoms?" }, "options": { "No tobacco or alcohol": "No tobacco or alcohol", "Tobacco": "Tobacco", "Alcohol": "Alcohol", "Both": "Both" } },
+  "alert": { "severity": "priority alert", "title": "Please get urgent help now", "instruction": "Please proceed to the priority desk immediately. A staff member will help you." },
+  "documents": { "title": "Upload a health document", "subtitle": "You can photograph or upload a lab report, prescription, or previous record.", "upload": "Take photo or choose a file", "uploadDetail": "Image or PDF", "processing": "Reading your document...", "preview": "Uploaded document preview", "skip": "Skip / Continue without documents", "continue": "Continue" },
+  "complete": { "title": "Thank you", "subtitle": "Please wait. You will be called shortly.", "reference": "Summary reference" }
+}
