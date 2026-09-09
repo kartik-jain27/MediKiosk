@@ -1,7 +1,7 @@
 import { http, HttpResponse } from "msw";
 import type { Consent, DoctorQueueEntry, InterviewStage, Patient, StructuredSummary, TriageAlert } from "@/types/api";
 import type { StaffAssignmentCandidate } from "@/types/rbac";
-import { interviewStages, isRedFlagAnswer, questionAt, summarySectionsFromAnswers } from "./flow";
+import { interviewStages, isRedFlagAnswer, questionAt, summarySectionsFromAnswers } from "./flow.ts";
 
 type MockInterview = { patientId: string; mode: StructuredSummary["mode"]; stageIndex: number; createdAt: string; answers: Partial<Record<InterviewStage, string>> };
 type MockData = { patients: [string, Patient][]; interviews: [string, MockInterview][]; alerts: [string, TriageAlert][]; summaries: [string, StructuredSummary][] };
@@ -30,7 +30,7 @@ const summaryFor = (patientId: string, mode: StructuredSummary["mode"] = "genera
 });
 
 export const handlers = [
-  http.post("/api/patients", async ({ request }) => {
+  http.post("*/api/patients", async ({ request }) => {
     log("POST /patients");
     const body = await request.json() as Pick<Patient, "name" | "phone" | "language">;
     const patient = { id: id(), ...body };
