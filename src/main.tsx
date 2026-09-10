@@ -6,14 +6,14 @@ import App from "./App";
 import { useAuthStore } from "./lib/stores/authStore";
 import { useDirectoryStore } from "./lib/stores/directoryStore";
 import { useDoctorQueueStore } from "./lib/stores/doctorQueueStore";
-import { useTokenStore } from "./lib/stores/tokenStore";
+import { usePatientRegistryStore } from "./lib/stores/patientRegistryStore";
 import "./lib/i18n";
 import "./index.css";
 
 const queryClient = new QueryClient();
 
 if (import.meta.env.DEV) {
-  console.info("[MediKiosk] RBAC stores restored", { role: useAuthStore.getState().role, doctors: useDirectoryStore.getState().doctors.length, staff: useDirectoryStore.getState().staff.length, tokens: useTokenStore.getState().tokens.length, queueItems: useDoctorQueueStore.getState().items.length });
+  console.info("[MediKiosk] stores restored", { role: useAuthStore.getState().role, doctors: useDirectoryStore.getState().doctors.length, staff: useDirectoryStore.getState().staff.length, patients: usePatientRegistryStore.getState().patients.length, queueItems: useDoctorQueueStore.getState().items.length });
 }
 
 async function start() {

@@ -5,6 +5,7 @@ export interface DoctorProfile {
   email: string;
   phone: string;
   licenseNumber: string;
+  aadhaarLast4: string;
   hospitalPosting: string;
   verified: true;
 }
@@ -19,14 +20,21 @@ export interface StaffProfile {
   governmentId: string;
   verified: true;
   favoriteDoctorId?: string;
+  favoriteDoctorIds?: string[];
 }
 
-export interface PatientToken {
-  token: string;
+export interface RegisteredPatient {
+  medikioskId: string;
+  name: string;
+  age: number;
+  gender: string;
+  email: string;
+  phone: string;
+  aadhaarLast4: string;
   issuedByStaffId: string;
-  patientDraft?: { name?: string; phone?: string; chiefComplaint?: string };
-  status: "issued" | "redeemed";
+  priority: "normal" | "urgent";
   createdAt: string;
+  latestIntakeId?: string;
 }
 
 export interface DoctorQueueItem {

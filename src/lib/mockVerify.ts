@@ -1,3 +1,1 @@
-export const mockVerify = () => new Promise<{ verified: true }>((resolve) => {
-  window.setTimeout(() => resolve({ verified: true }), 600 + Math.floor(Math.random() * 301));
-});
+export const mockVerify = async (): Promise<{ verified: true }> => ({ verified: true });

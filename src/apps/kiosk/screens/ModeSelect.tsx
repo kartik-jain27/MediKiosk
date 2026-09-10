@@ -20,7 +20,7 @@ export function ModeSelect() {
   const [error, setError] = useState("");
   const continueToInterview = async () => {
     if (!selection) return;
-    if (!patientId) { navigate("/kiosk/register", { replace: true }); return; }
+    if (!patientId) { navigate("/staff/dashboard", { replace: true }); return; }
     try { const start = await api.startInterview({ patientId, mode: selection.mode }); setMode(selection.mode); setInterview(start.interviewId, start.question); navigate("/kiosk/interview"); } catch { setError(t("common.error")); }
   };
   return <main className="screen mode-screen"><h1>{t("mode.title")}</h1><p>{t("mode.subtitle")}</p>

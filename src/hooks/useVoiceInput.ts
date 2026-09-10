@@ -26,7 +26,7 @@ export function useVoiceInput(language: "en" | "hi", onResult: (value: string) =
     recognition.interimResults = false;
     recognition.onresult = (event) => onResult(event.results[0][0].transcript);
     recognition.onend = () => { recognitionRef.current = null; setIsListening(false); };
-    recognition.onerror = () => { setError("voiceInputUnavailable"); setIsListening(false); };
+    recognition.onerror = () => { recognitionRef.current = null; setError("voiceInputUnavailable"); setIsListening(false); };
     setError("");
     setIsListening(true);
     try { recognition.start(); } catch { recognitionRef.current = null; setIsListening(false); setError("voiceInputUnavailable"); }
